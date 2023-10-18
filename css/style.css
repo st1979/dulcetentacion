@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fcefd0; /* Color de fondo pastel */
+}
+
+header {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+main {
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    gap: 20px;
+    
+    margin-bottom: 70px; /* Ajusta el margen inferior para dejar espacio al footer */
+
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    display: grid;
+    gap: 15px;
+    background-color: #ffffff; /* Fondo del formulario */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en la cuadrícula */
+}
+
+label {
+    font-weight: bold;
+    color: #555; /* Color de texto suave */
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd; /* Borde del input */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #6aa84f; /* Color del botón */
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+button:hover {
+    background-color: #4d7b3a; /* Color del botón al pasar el ratón */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* select#cobertura {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-image: url('../img/cobertura_chocolate1.jpg'); 
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+select#cobertura option[value="chocolate"] {
+    background-image: url('../img/cobertura_chocolate2.jpg');
+}
+
+select#cobertura option[value="vainilla"] {
+    background-image: url('../img/cobertura_vainilla2.jpg');
+}
+
+select#cobertura option[value="fresa"] {
+    background-image: url('../img/cobertura_fresa1.jpg');
+}*/
+
+input#cobertura {
+    display: none;
+}
+
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.custom-select select {
+    display: none; /* Oculta el select original */
+}
+
+.select-selected {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.select-selected img {
+    width: 60%; /* Tamaño ajustado de las imágenes con porcentaje */
+    max-width:60px; /* Establece un ancho máximo para imágenes más grandes */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-right: 10px;
+}
+
+.select-items {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+    display: none;
+    width: 100%;
+}
+
+.select-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+.select-item img {
+    width: 40%; /* Tamaño ajustado de las imágenes en las opciones con porcentaje */
+    max-width: 60px; /* Establece un ancho máximo para imágenes más grandes */
+    height: auto; /* Mantiene la proporción de aspecto */
+    margin-right: 10px;
+}
+
+.select-item:last-child {
+    border-bottom: none;
+}
+
+/*css para los checkbox*/
+.decoracion-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.decoracion-options label {
+    margin-bottom: 5px;
+}
+
+.decoracion-options input {
+    margin-right: 5px;
+}
