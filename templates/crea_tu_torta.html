@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Tortas Creativas - Crear tu Torta</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tortas Creativas</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="crear-torta.html">Crear tu Torta</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Crea tu Torta</h2>
+        <form>
+            <label for="sabor">Selecciona el sabor:</label>
+            <select id="sabor" name="sabor">
+                <option value="chocolate">Chocolate</option>
+                <option value="vainilla">Vainilla</option>
+                <option value="fresa">Fresa</option>
+            </select>
+
+            <label for="tamano">Selecciona el tamaño:</label>
+            <select id="tamano" name="tamano">
+                <option value="pequeno">Pequeño</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+            </select>
+
+            <!-- <label for="cobertura">Selecciona la cobertura:</label> -->
+            <input type="text" id="cobertura" name="cobertura" placeholder="Escribe la cobertura deseada">
+
+            <!-- <label for="cobertura">Selecciona la cobertura:</label>
+            <select id="cobertura" name="cobertura">
+                <option value="chocolate">Chocolate</option>
+                <option value="vainilla">Vainilla</option>
+                <option value="fresa">Fresa</option>
+            </select> -->
+
+            <label for="cobertura">Selecciona la cobertura:</label>
+    <div class="custom-select">
+        <select id="cobertura" name="cobertura">
+            <option value="chocolate" data-image="../img/cobertura_chocolate1.jpg">Chocolate</option>
+            <option value="vainilla" data-image=" ../img/cobertura_vainilla2.jpg">Vainilla</option>
+            <option value="fresa" data-image="../img/cobertura_fresa1.jpg">Fresa</option>
+        </select>
+        <div class="select-selected" onclick="toggleOptions()">
+            <img src="../img/icono-cobertura.jpg" alt="Icono de cobertura" id="selected-image">
+            <span id="selected-text">Selecciona una cobertura</span>
+        </div>
+        <div class="select-items">
+            <div class="select-item" onclick="selectItem('chocolate', '../img/cobertura_chocolate1.jpg')">
+                <img src="../img/cobertura_chocolate1.jpg" alt="Chocolate"> Chocolate
+            </div>
+            <div class="select-item" onclick="selectItem('vainilla', '../img/cobertura_vainilla2.jpg')">
+                <img src="../img/cobertura_vainilla2.jpg" alt="Vainilla"> Vainilla
+            </div>
+            <div class="select-item" onclick="selectItem('fresa', '../img/cobertura_fresa1.jpg')">
+                <img src="../img/cobertura_fresa1.jpg" alt="Fresa"> Fresa
+            </div>
+        </div>
+    </div>
+            <!-- <label for="decoracion">Opciones de decoración:</label>
+            <input type="text" id="decoracion" name="decoracion" placeholder="Escribe las opciones de decoración"> -->
+            <label for="decoracion">Opciones de decoración:</label>
+            <div class="decoracion-options">
+                <input type="checkbox" id="opcion1" name="decoracion[]" value="opcion1">
+                <label for="opcion1">Flores comestibles</label>
+            
+                <input type="checkbox" id="opcion2" name="decoracion[]" value="opcion2">
+                <label for="opcion2">Figura modelada a mano</label>
+            
+                <input type="checkbox" id="opcion3" name="decoracion[]" value="opcion3">
+                <label for="opcion3">Frutas Frescas</label>
+                
+                <input type="checkbox" id="opcion4" name="decoracion[]" value="opcion3">
+                <label for="opcion3">Drip Chocolate/Caramelo</label>
+                
+                <input type="checkbox" id="opcion5" name="decoracion[]" value="opcion3">
+                <label for="opcion3">Sprinckles / confites</label>
+                
+                <input type="checkbox" id="opcion6" name="decoracion[]" value="opcion3">
+                <label for="opcion3">Golosinas</label>
+            
+                <!-- Añadir más opciones según sea necesario -->
+            </div>
+
+            <label for="mensaje">Mensaje personalizado:</label>
+            <input type="text" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje personalizado">
+
+            <button type="submit">Crear mi Torta</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Tortas Creativas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function selectItem(value, image) {
+            document.getElementById('cobertura').value = value;
+            document.getElementById('selected-text').innerText = value;
+            document.getElementById('selected-image').src = image;
+            toggleOptions(); // Oculta las opciones después de seleccionar
+        }
+
+        function toggleOptions() {
+            var selectItems = document.querySelector('.select-items');
+            selectItems.style.display = (selectItems.style.display === 'none') ? 'block' : 'none';
+        }
+    </script>
+
+</body>
+</html>
