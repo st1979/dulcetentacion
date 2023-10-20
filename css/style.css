@@ -1,5 +1,5 @@
 /*
-Estilos
+Estilos 
 */
 
 body {
@@ -190,3 +190,22 @@ input#cobertura {
 .decoracion-options input {
     margin-right: 5px;
 }
+
+
+
+
+
+
+
+
+
+
+#mi_contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  #mi_contenedor > div {
+    width: 50%;
+  }

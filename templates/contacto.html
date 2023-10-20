@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../css/style.css"
+    <script src="../js/validaciones.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
@@ -16,5 +18,42 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <div id="mi_contenedor">
+            <div>
+                <!-- Contenido de la primer columna -->
+              <form id="formularioContacto" onsubmit="return validarFormulario()">
+                <!--  Crear campos para el formulario  -->
+                    <label for="nombre">Nombre:</label> <br>
+                    <input type="text" name="nombre" id="nombre" maxlength="10"> <br>
+               
+                    <label for="apellido">Apellido:</label> <br>
+                    <input type="text" name="apellido" id="apellido"> <br>
+      
+                    <label for="telefono">Teléfono</label> <br>
+                    <input type="tel" name="telefono" id="telefono"> <br>
+           
+                    <label for="email">Correo:</label><br>
+                    <input type="email" name="email" id="email"> <br>
+    
+                    <label for="comentario">Comentario</label> <br>
+                    <textarea name="comentario" id="comentario" cols="30" rows="5" maxlength="30"
+                        placeholder="Escriba un comentario"></textarea> <br>
+                    <br><br>
+                    <!-- Agregar los botones para enviar(submit) y borrar(reset). -->
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Borrar">
+                </form>
+            </div>
+            <div>
+                <!-- Contenido de la segunda columna -->
+                <p>Nos encontras en: </p>
+                <iframe src="https://www.google.com/maps/d/embed?mid=1K9QFMV9cT4NIlaNJh_93Dpg-hz0dFVU&ehbc=2E312F&noprof=1" width="80%" height="270"></iframe>            
+            </div>
+        </div>
+
+    </main>
+
+
 </body>
 </html>
