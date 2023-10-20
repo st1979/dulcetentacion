@@ -3,7 +3,8 @@ Estilos
 */
 
 body {
-    font-family: Arial, sans-serif;
+    /*font-family: Arial, sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -189,14 +190,36 @@ input#cobertura {
 
 .decoracion-options input {
     margin-right: 5px;
+    width: 20%;
 }
 
-/*primer comentario*/
-
-.decoracion-option input {
-    margin-right: 15px;
+.intro-paragraph {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
 }
-/*
-545454
-*/
+@media (max-width: 768px) {
+    .intro-paragraph {
+        font-size: 16px;
+        padding: 5px;
+    }
+}
+/* fuente Google fonts*/
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('Montserrat-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.decoracion-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta según tus preferencias */
+    gap: 10px; /* Añade espacio entre elementos (ajusta según tus preferencias) */
+}
+
 
