@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <link rel="stylesheet" href="../css/style.css"
     <script src="../js/validaciones.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- esto se agrega para incorporar una fuente  de Google Fonts Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon"  href="img/dulceicon.ico">
+    <style>
+        /* Aplicar un borde redondeado al ícono en la pestaña del navegador */
+        /* Esto hará que el ícono sea circular */
+        /* Ajusta el tamaño según tus preferencias */
+        link[rel="icon"] {
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+        }
+      </style>
+    <title>DulceTentacion</title>
+
 </head>
+
 <body>
     <header>
-        <nav>
+
+       <nav>
             <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="crear-torta.html">Crear tu Torta</a></li>
+                <li><a href="../index2.html">Inicio</a></li>
+                <li><a href="crea_tu_torta.html">Crear tu Torta</a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
-        </nav>
+        </nav> 
+
     </header>
     <main>
         <div id="mi_contenedor">
@@ -55,5 +76,19 @@
     </main>
 
 
+    <footer>
+        <p>&copy; 2023 Dulce Tentacion. Todos los derechos reservados.</p>
+        <p>Pelegrini y Av. Belgrano Sur - Santiago del Estero, Capital</p>
+    </footer>
+
+    <script>
+       
+
+        function toggleOptions() {
+            var selectItems = document.querySelector('.select-items');
+            selectItems.style.display = (selectItems.style.display === 'none') ? 'block' : 'none';
+        }
+    </script>
 </body>
+
 </html>

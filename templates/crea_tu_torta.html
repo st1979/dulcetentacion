@@ -1,42 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Tortas Creativas - Crear tu Torta</title>
+    <!-- esto se agrega para incorporar una fuente  de Google Fonts Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="icon"  href="img/dulceicon.ico">
     <style>
-        
-    </style>
+        /* Aplicar un borde redondeado al ícono en la pestaña del navegador */
+        /* Esto hará que el ícono sea circular */
+        /* Ajusta el tamaño según tus preferencias */
+        link[rel="icon"] {
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+        }
+      </style>
+    <title>DulceTentacion</title>
+
 </head>
+
 <body>
     <header>
-        <h1>Tortas Creativas</h1>
-        <nav>
+
+       <nav>
             <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="crear-torta.html">Crear tu Torta</a></li>
+                <li><a href="../index2.html">Inicio</a></li>
+                <li><a href="crea_tu_torta.html">Crear tu Torta</a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
-        </nav>
+        </nav> 
+
+        <!-- <div class="header-linea">
+            <img class="logo" src="img/dulceicon.ico" alt="icono">
+        </div>
+
+      
+        <nav class="header-linea">
+            <a class="menu" href="../index.html">Inicio</a>
+            <a class="menu" href="catalogo.html">Catalogo</a>
+            <a class="menu" href="crea_tu_torta.html">Crea tu torta</a>
+            <a class="menu" href="contacto.html">Contacto</a>
+
+        </nav> -->
     </header>
 
     <main>
         <h2>Crea tu Torta</h2>
-        <form>
-            <label for="sabor">Selecciona el sabor:</label>
-            <select id="sabor" name="sabor">
+        <p class="intro-paragraph">¡Personaliza tu torta perfecta! Completa el siguiente formulario con tus preferencias
+            y detalles de pedido. Estamos emocionados por ayudarte a crear una deliciosa torta que se adapte a tus
+            gustos.</p>
+
+        <form action="https://formspree.io/f/xzblopgl" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+
+
+            <label for="fechaEvento">Fecha del Evento:</label>
+            <input type="date" id="fechaEvento" name="fechaEvento" required>
+
+            <label for="sabor">Sabor:</label>
+            <select id="sabor" name="sabor" required>
+                <option value="">Seleccione el sabor</option>
                 <option value="chocolate">Chocolate</option>
                 <option value="vainilla">Vainilla</option>
                 <option value="fresa">Fresa</option>
             </select>
 
-            <label for="tamano">Selecciona el tamaño:</label>
-            <select id="tamano" name="tamano">
-                <option value="pequeno">Pequeño</option>
-                <option value="mediano">Mediano</option>
-                <option value="grande">Grande</option>
+            <label for="tamano">Tamaño:</label>
+            <select id="tamano" name="tamano" required>
+                <option value="">Seleccione el tamaño</option>
+                <option value="1">1 kg</option>
+                <option value="2">2 kg</option>
+                <option value="3">3 kg</option>
+                <option value="4">4 kg</option>
+                <option value="5">5 kg</option>
             </select>
 
             <!-- <label for="cobertura">Selecciona la cobertura:</label> -->
@@ -49,51 +99,68 @@
                 <option value="fresa">Fresa</option>
             </select> -->
 
-            <label for="cobertura">Selecciona la cobertura:</label>
-    <div class="custom-select">
-        <select id="cobertura" name="cobertura">
-            <option value="chocolate" data-image="../img/cobertura_chocolate1.jpg">Chocolate</option>
-            <option value="vainilla" data-image=" ../img/cobertura_vainilla2.jpg">Vainilla</option>
-            <option value="fresa" data-image="../img/cobertura_fresa1.jpg">Fresa</option>
-        </select>
-        <div class="select-selected" onclick="toggleOptions()">
-            <img src="../img/icono-cobertura.jpg" alt="Icono de cobertura" id="selected-image">
-            <span id="selected-text">Selecciona una cobertura</span>
-        </div>
-        <div class="select-items">
-            <div class="select-item" onclick="selectItem('chocolate', '../img/cobertura_chocolate1.jpg')">
-                <img src="../img/cobertura_chocolate1.jpg" alt="Chocolate"> Chocolate
+            <label for="cobertura">Cobertura:</label>
+            <div class="custom-select">
+                <select id="cobertura" name="cobertura" required>
+                    <option value="chocolate" data-image="../img/cobertura_chocolate1.jpg">Chocolate</option>
+                    <option value="vainilla" data-image=" ../img/cobertura_vainilla2.jpg">Vainilla</option>
+                    <option value="fresa" data-image="../img/cobertura_fresa1.jpg">Fresa</option>
+                </select>
+                <div class="select-selected" onclick="toggleOptions()">
+                    <img src="../img/icono-cobertura.jpg" alt="Icono de cobertura" id="selected-image">
+                    <span id="selected-text">Selecciona una cobertura</span>
+                </div>
+                <div class="select-items">
+                    <div class="select-item" onclick="selectItem('chocolate', '../img/cobertura_chocolate1.jpg')">
+                        <img src="../img/cobertura_chocolate1.jpg" alt="Chocolate"> Chocolate
+                    </div>
+                    <div class="select-item" onclick="selectItem('vainilla', '../img/cobertura_vainilla2.jpg')">
+                        <img src="../img/cobertura_vainilla2.jpg" alt="Vainilla"> Vainilla
+                    </div>
+                    <div class="select-item" onclick="selectItem('fresa', '../img/cobertura_fresa1.jpg')">
+                        <img src="../img/cobertura_fresa1.jpg" alt="Fresa"> Fresa
+                    </div>
+                </div>
             </div>
-            <div class="select-item" onclick="selectItem('vainilla', '../img/cobertura_vainilla2.jpg')">
-                <img src="../img/cobertura_vainilla2.jpg" alt="Vainilla"> Vainilla
-            </div>
-            <div class="select-item" onclick="selectItem('fresa', '../img/cobertura_fresa1.jpg')">
-                <img src="../img/cobertura_fresa1.jpg" alt="Fresa"> Fresa
-            </div>
-        </div>
-    </div>
             <!-- <label for="decoracion">Opciones de decoración:</label>
             <input type="text" id="decoracion" name="decoracion" placeholder="Escribe las opciones de decoración"> -->
             <label for="decoracion">Opciones de decoración:</label>
             <div class="decoracion-options">
-                <input type="checkbox" id="opcion1" name="decoracion[]" value="opcion1">
-                <label for="opcion1">Flores comestibles</label>
-            
-                <input type="checkbox" id="opcion2" name="decoracion[]" value="opcion2">
-                <label for="opcion2">Figura modelada a mano</label>
-            
-                <input type="checkbox" id="opcion3" name="decoracion[]" value="opcion3">
-                <label for="opcion3">Frutas Frescas</label>
-                
-                <input type="checkbox" id="opcion4" name="decoracion[]" value="opcion3">
-                <label for="opcion3">Drip Chocolate/Caramelo</label>
-                
-                <input type="checkbox" id="opcion5" name="decoracion[]" value="opcion3">
-                <label for="opcion3">Sprinckles / confites</label>
-                
-                <input type="checkbox" id="opcion6" name="decoracion[]" value="opcion3">
-                <label for="opcion3">Golosinas</label>
-            
+                <div>
+                    <input type="checkbox" id="opcion1" name="decoracion[]" value="opcion1">
+                    <label for="opcion1">Flores comestibles</label>
+                </div>
+                <div><input type="checkbox" id="opcion2" name="decoracion[]" value="opcion2">
+                    <label for="opcion2">Figura modelada a mano</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="opcion3" name="decoracion[]" value="opcion3">
+                    <label for="opcion3">Frutas Frescas</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="opcion4" name="decoracion[]" value="opcion4">
+                    <label for="opcion4">Drip Chocolate/Caramelo</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="opcion5" name="decoracion[]" value="opcion5">
+                    <label for="opcion5">Sprinckles / confites</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="opcion6" name="decoracion[]" value="opcion6">
+                    <label for="opcion6">Golosinas</label>
+                </div>
+                <div></div>
+
+
+
+
+
+
+
+
+
+
+
                 <!-- Añadir más opciones según sea necesario -->
             </div>
 
@@ -105,7 +172,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2023 Tortas Creativas. Todos los derechos reservados.</p>
+        <p>&copy; 2023 Dulce Tentacion. Todos los derechos reservados.</p>
+        <p>Pelegrini y Av. Belgrano Sur - Santiago del Estero, Capital</p>
     </footer>
 
     <script>
@@ -123,4 +191,5 @@
     </script>
 
 </body>
+
 </html>
