@@ -5,58 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <!-- esto se agrega para incorporar una fuente  de Google Fonts Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="icon"  href="img/dulceicon.ico">
+    
+    <link rel="icon" href="../img/dulceicon.ico">
     <style>
         /* Aplicar un borde redondeado al ícono en la pestaña del navegador */
         /* Esto hará que el ícono sea circular */
         /* Ajusta el tamaño según tus preferencias */
         link[rel="icon"] {
-          border-radius: 50%;
-          width: 32px;
-          height: 32px;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
         }
-      </style>
-    <title>DulceTentacion</title>
+    </style>
+    <title>Crea tu Torta -  DulceTentacion</title>
 
 </head>
 
 <body>
     <header>
-
-       <nav>
-            <ul>
-                <li><a href="../index2.html">Inicio</a></li>
-                <li><a href="crea_tu_torta.html">Crear tu Torta</a></li>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav> 
-
-        <!-- <div class="header-linea">
-            <img class="logo" src="img/dulceicon.ico" alt="icono">
+        <div class="header-linea">
+            <img class="logo" src="../img/dulce2.png" alt="">
         </div>
+        <nav>
+            <a href="../index2.html">INICIO</a>
+            <a href="crea_tu_torta.html">CREA TU TORTA</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
 
-      
-        <nav class="header-linea">
-            <a class="menu" href="../index.html">Inicio</a>
-            <a class="menu" href="catalogo.html">Catalogo</a>
-            <a class="menu" href="crea_tu_torta.html">Crea tu torta</a>
-            <a class="menu" href="contacto.html">Contacto</a>
-
-        </nav> -->
     </header>
 
     <main>
-        <h2>Crea tu Torta</h2>
+        <h1>Formulario para Crear tu Torta</h2>
         <p class="intro-paragraph">¡Personaliza tu torta perfecta! Completa el siguiente formulario con tus preferencias
             y detalles de pedido. Estamos emocionados por ayudarte a crear una deliciosa torta que se adapte a tus
             gustos.</p>
 
         <form action="https://formspree.io/f/xzblopgl" method="post">
+
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
 
@@ -126,42 +112,32 @@
             <input type="text" id="decoracion" name="decoracion" placeholder="Escribe las opciones de decoración"> -->
             <label for="decoracion">Opciones de decoración:</label>
             <div class="decoracion-options">
-                <div>
-                    <input type="checkbox" id="opcion1" name="decoracion[]" value="opcion1">
+                <div class="decoracion-option">
+                    <input type="checkbox" id="opcion1" name="decoracion[]" value="flores">
                     <label for="opcion1">Flores comestibles</label>
                 </div>
-                <div><input type="checkbox" id="opcion2" name="decoracion[]" value="opcion2">
+                <div class="decoracion-option">
+                    <input type="checkbox" id="opcion2" name="decoracion[]" value="figura">
                     <label for="opcion2">Figura modelada a mano</label>
                 </div>
-                <div>
-                    <input type="checkbox" id="opcion3" name="decoracion[]" value="opcion3">
+                <div class="decoracion-option">
+                    <input type="checkbox" id="opcion3" name="decoracion[]" value="frutas">
                     <label for="opcion3">Frutas Frescas</label>
                 </div>
-                <div>
-                    <input type="checkbox" id="opcion4" name="decoracion[]" value="opcion4">
+                <div class="decoracion-option">
+                    <input type="checkbox" id="opcion4" name="decoracion[]" value="drip">
                     <label for="opcion4">Drip Chocolate/Caramelo</label>
                 </div>
-                <div>
-                    <input type="checkbox" id="opcion5" name="decoracion[]" value="opcion5">
+                <div class="decoracion-option">
+                    <input type="checkbox" id="opcion5" name="decoracion[]" value="sprinkes">
                     <label for="opcion5">Sprinckles / confites</label>
                 </div>
-                <div>
-                    <input type="checkbox" id="opcion6" name="decoracion[]" value="opcion6">
+                <div class="decoracion-option">
+                    <input type="checkbox" id="opcion6" name="decoracion[]" value="golosinas">
                     <label for="opcion6">Golosinas</label>
                 </div>
                 <div></div>
 
-
-
-
-
-
-
-
-
-
-
-                <!-- Añadir más opciones según sea necesario -->
             </div>
 
             <label for="mensaje">Mensaje personalizado:</label>

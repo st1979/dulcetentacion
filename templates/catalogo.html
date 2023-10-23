@@ -5,66 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <!-- esto se agrega para incorporar una fuente  de Google Fonts Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="icon"  href="img/dulceicon.ico">
+
+    <link rel="icon" href="img/dulceicon.ico">
     <style>
         /* Aplicar un borde redondeado al ícono en la pestaña del navegador */
         /* Esto hará que el ícono sea circular */
         /* Ajusta el tamaño según tus preferencias */
         link[rel="icon"] {
-          border-radius: 50%;
-          width: 32px;
-          height: 32px;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
         }
-      </style>
-      <title>DulceTentacion</title>
-    
+
+        /* style.css */
+
+        /* Agrega un estilo base para las imágenes en el catálogo */
+        .photo {
+            position: relative;
+            overflow: hidden;
+            width: 300px;
+            /* Ajusta el tamaño según tus necesidades */
+            height: 200px;
+            /* Ajusta el tamaño según tus necesidades */
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s;
+            /* Animación de desvanecimiento de 0.5 segundos */
+        }
+
+        .photo:hover img {
+            opacity: 0.7;
+            /* Cambia la opacidad al pasar el cursor sobre la imagen */
+        }
+    </style>
+    <title>Catálogo de imagenes - DulceTentacion</title>
+
 
 </head>
 
 <body>
     <header>
-
-       <nav>
-            <ul>
-                <li><a href="../index2.html">Inicio</a></li>
-                <li><a href="crea_tu_torta.html">Crear tu Torta</a></li>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav> 
+        <div class="header-linea">
+            <img class="logo" src="../img/dulce2.png" alt="">
+        </div>
+        <nav>
+            <a href="../index2.html">INICIO</a>
+            <a href="crea_tu_torta.html">CREA TU TORTA</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
 
     </header>
 
     <main>
-        <h2>CATALOGO</h2>
-        <p class="intro-paragraph">¡Bienvenido a nuestro catálogo de tortas, donde la dulzura se encuentra con la creatividad! En Dulce Tentacion,
-             nos enorgullece ofrecerte una amplia variedad de tortas exquisitas que satisfarán tus antojos. Desde clásicos pasteles de cumpleaños hasta creaciones únicas,
-              nuestras tortas están hechas con amor y los ingredientes más frescos.</p>
+        <h2>CATALOGO - DULCE TENTACIÓN</h2>
+        <p class="intro-paragraph">¡Bienvenido a nuestro catálogo de tortas, donde la dulzura se encuentra con la
+            creatividad! En Dulce Tentacion,
+            nos enorgullece ofrecerte una amplia variedad de tortas exquisitas que satisfarán tus antojos. Desde
+            clásicos pasteles de cumpleaños hasta creaciones únicas,
+            nuestras tortas están hechas con amor y los ingredientes más frescos.</p>
 
 
 
-                <!-- Añadir más opciones según sea necesario -->
+        <!-- Añadir más opciones según sea necesario -->
+        </div>
+
+        <div class="gallery">
+            <div class="photo">
+                <img src="../img/torta1.jpg" alt="Foto 1">
+                <div class="caption">Chescake de frutos rojos</div>
             </div>
-
-            <div class="gallery">
-                <div class="photo">
-                    <img src="../img/torta1.jpg" alt="Foto 1">
-                    <div class="caption"></div>
-                </div>
-                <div class="photo">
-                    <img src="../img/torta2.jpg" alt="Foto 2">
-                    <div class="caption"></div>
-                </div>
-                <div class="photo">
-                    <img src="../img/torta3.jpg" alt="Foto 3">
-                    <div class="caption"></div>
-                </div>
-                <!-- Agrega más fotos según sea necesario -->
+            <div class="photo">
+                <img src="../img/torta2.jpg" alt="Foto 2">
+                <div class="caption">Torta de Cumpleaños</div>
             </div>
+            <div class="photo">
+                <img src="../img/torta3.jpg" alt="Foto 3">
+                <div class="caption">Torta de chocolate</div>
+            </div>
+        </div>
     </main>
 
 
@@ -74,7 +97,7 @@
     </footer>
 
     <script>
-       
+
 
         function toggleOptions() {
             var selectItems = document.querySelector('.select-items');
