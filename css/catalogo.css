@@ -1,0 +1,21 @@
+.photo {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    /* Ajusta el tamaño según tus necesidades */
+    height: 200px;
+    /* Ajusta el tamaño según tus necesidades */
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s;
+    /* Animación de desvanecimiento de 0.5 segundos */
+}
+
+.photo:hover img {
+    opacity: 0.7;
+    /* Cambia la opacidad al pasar el cursor sobre la imagen */
+}
