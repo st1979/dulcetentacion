@@ -37,6 +37,6 @@ function validarFormulario() {
       alert("Por favor,ingrese dni sólo con números.")
       return false
     }
-    
+
     alert("Se enviaron los datos correctamente.")
   }

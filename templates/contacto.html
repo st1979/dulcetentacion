@@ -1,38 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <link rel="stylesheet" href="../css/style.css"
     <script src="../js/validaciones.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <!-- esto se agrega para incorporar una fuente  de Google Fonts Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="icon"  href="img/dulceicon.ico">
-    <style>
-        /* Aplicar un borde redondeado al ícono en la pestaña del navegador */
-        /* Esto hará que el ícono sea circular */
-        /* Ajusta el tamaño según tus preferencias */
-        link[rel="icon"] {
-          border-radius: 50%;
-          width: 32px;
-          height: 32px;
-        }
-      </style>
-    <title>Contacto - DulceTentacion</title>
-
+    <title>Contacto</title>
 </head>
-
 <body>
     <header>
         <div class="header-linea">
             <img class="logo" src="../img/dulce2.png" alt="">
         </div>
         <nav>
-            <a href="../index2.html">INICIO</a>
+            <a href="../index.html">INICIO</a>
             <a href="crea_tu_torta.html">CREA TU TORTA</a>
             <a href="catalogo.html">CATÁLOGO</a>
             <a href="contacto.html">CONTACTO</a>
@@ -40,7 +21,6 @@
 
     </header>
     <main>
-        <h1>Formulario de Contacto</h1>
         <div id="mi_contenedor">
             <div>
                 <!-- Contenido de la primer columna -->
@@ -48,16 +28,16 @@
                 <!--  Crear campos para el formulario  -->
                     <label for="nombre">Nombre:</label> <br>
                     <input type="text" name="nombre" id="nombre" maxlength="10"> <br>
-               
+
                     <label for="apellido">Apellido:</label> <br>
                     <input type="text" name="apellido" id="apellido"> <br>
-      
+
                     <label for="telefono">Teléfono</label> <br>
                     <input type="tel" name="telefono" id="telefono"> <br>
-           
+
                     <label for="email">Correo:</label><br>
                     <input type="email" name="email" id="email"> <br>
-    
+
                     <label for="comentario">Comentario</label> <br>
                     <textarea name="comentario" id="comentario" cols="30" rows="5" maxlength="30"
                         placeholder="Escriba un comentario"></textarea> <br>
@@ -66,7 +46,6 @@
                     <input type="submit" value="Enviar">
                     <input type="reset" value="Borrar">
                 </form>
-                <iframe src="https://www.google.com/maps/d/embed?mid=1K9QFMV9cT4NIlaNJh_93Dpg-hz0dFVU&ehbc=2E312F&noprof=1" width="80%" height="270"></iframe>            
             </div>
             <div>
                 <!-- Contenido de la segunda columna -->
@@ -78,19 +57,5 @@
     </main>
 
 
-    <footer>
-        <p>&copy; 2023 Dulce Tentacion. Todos los derechos reservados.</p>
-        <p>Pelegrini y Av. Belgrano Sur - Santiago del Estero, Capital</p>
-    </footer>
-
-    <script>
-       
-
-        function toggleOptions() {
-            var selectItems = document.querySelector('.select-items');
-            selectItems.style.display = (selectItems.style.display === 'none') ? 'block' : 'none';
-        }
-    </script>
 </body>
-
 </html>
