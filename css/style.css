@@ -189,11 +189,11 @@ input#cobertura {
 
 .select-item img {
     width: 40%;
-    /* Tamaño ajustado de las imágenes en las opciones con porcentaje */
+    
     max-width: 60px;
-    /* Establece un ancho máximo para imágenes más grandes */
+    
     height: auto;
-    /* Mantiene la proporción de aspecto */
+    
     margin-right: 10px;
 }
 
@@ -216,72 +216,19 @@ input#cobertura {
 }
 
 #mi_contenedor {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas */
+    gap: 20px; /* Espacio entre columnas */
+
 }
 
 #mi_contenedor>div {
     width: 80%;
 }
-
-
-
-/*primer comentario
-segundo comentario*/
-/*------------------------ carrusel*/
-/* .carousel-container {
-    width: 300px;
-    overflow: hidden;
-    white-space: nowrap;
-    border: 1px solid #ccc;
-    position: relative;
-} */
-
-/* .carousel-slide {
-    width: 300px;
-    display: inline-block;
-    vertical-align: top;
-    transition: transform 1s;
-} */
-
-/* img {
-    max-width: 100%;
-    height: auto;
-} */
-
-/* Clase que realiza la animación de desplazamiento */
-/* .animate {
-    transform: translateX(600px);
-    animation: slide 2s;
-} */
-
-/* @keyframes slide {
-
-    0%,
-    100% {
-        transform: translateX(0);
-    }
-
-    20% {
-        transform: translateX(0);
-    }
-
-    25%,
-    45% {
-        transform: translateX(-300px);
-    }
-
-    50%,
-    70% {
-        transform: translateX(-600px);
-    }
-
-    75%,
-    95% {
-        transform: translateX(0);
-    }
-} */
 
 /*--------------------*/
 .gallery {
@@ -398,8 +345,6 @@ input[type="submit"]:hover {
 mismo tipo de letra*/
 .fa {
     font-family: 'Barlow';
-   
-    /* También aplicamos la fuente a los íconos de Font Awesome (clase .fa) */
 }
 .footer-column {
     flex: 1;
