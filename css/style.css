@@ -313,7 +313,7 @@ img {
     bottom: 0;
     left: 0;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 
 /*----------------------*/
@@ -393,4 +393,19 @@ input[type="submit"]:hover {
 
     text-align: center;
     font-weight: bold;
+}
+/*----------------
+mismo tipo de letra*/
+.fa {
+    font-family: 'Barlow';
+   
+    /* También aplicamos la fuente a los íconos de Font Awesome (clase .fa) */
+}
+.footer-column {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+.left-div {
+    float: left;
 }
