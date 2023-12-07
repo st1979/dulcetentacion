@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../img/dulceicon.ico">
+
+    <!-- boostrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Listado de Pedidos - DulceTentacion</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-linea">
+            <img class="logo" src="../img/dulce2.png" alt="">
+        </div>
+        <nav>
+            <a href="../index.html">INICIO</a>
+            <a href="crea_tu_torta.html">CREA TU TORTA</a>
+            <a href="pedidos.html">PEDIDOS</a>
+            <a href="catalogo.html">CATÁLOGO</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+    </header>
+
+    <main>
+        <div id="app" class="container">
+            <h1>Listado de Pedidos</h1>
+            <br>
+            <a class="btn btn-primary" href="crea_tu_torta.html">Nuevo Pedido</a>
+            <br><br>
+            <div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Telefono</th>
+
+                                    <th scope="col">Fecha Evento</th>
+                                    <th scope="col">Sabor</th>
+                                    <th scope="col">Tamaño</th>
+                                    <th scope="col">Cobertura</th>
+                                    <th scope="col">Decoracion</th>
+                                    <th scope="col">Mensaje</th>
+                                    <th scope="col">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="" v-for="pedido in pedidos">
+                                    <td scope="row">{{pedido.id}}</td>
+                                    <td>{{ pedido.nombre }} {{ pedido.apellido }}</td>
+
+                                    <td>{{pedido.telefono}}</td>
+                                    <td>{{pedido.fechaEvento}}</td>
+                                    <td>{{pedido.sabor}}</td>
+                                    <td>{{pedido.tamano}} kg</td>
+                                    <!-- <td>{{pedido.cobertura}}</td> -->
+                                    <td>
+                                        <!-- Verificar si la URL de la imagen está presente -->
+                                        <template v-if="pedido.cobertura">
+                                            <!-- Mostrar la imagen si hay una URL válida -->
+                                            <img :src="pedido.cobertura" alt="Imagen de cobertura" width="100"
+                                                height="100">
+                                        </template>
+                                        <!-- Mostrar un mensaje si la URL está vacía o no válida -->
+                                        <template v-else>
+                                            Sin imagen
+                                        </template>
+                                    </td>
+                                    <td>{{pedido.decoracion}}</td>
+                                    <td>{{pedido.mensaje}}</td>
+
+                                    <td>
+                                        <a class="btn btn-primary" :href="'editar_pedido.html?id=' + pedido.id + '&nombre=' + pedido.nombre +
+                                        '&apellido=' + pedido.apellido + '&fechaEvento=' + pedido.fechaEvento +
+                                        '&sabor=' + pedido.sabor + '&tamano=' + pedido.tamano +
+                                        '&cobertura=' + pedido.cobertura + '&decoracion=' + pedido.decoracion +
+                                        '&mensaje=' + pedido.mensaje + '&telefono='+ pedido.telefono">Editar</a>
+                                        <!-- <a class="boton"
+                                            :href="'templates/editar_producto.html?id='+ pedido.id+'&nombre=' +pedido.nombre+
+                                             '&precio='+pedido.precio+'&stock='+pedido.stock +  '&imagen='+pedido.imagen">Editar</a> -->
+                                        <button type="button" class="btn btn-danger"
+                                            v-on:click="eliminar(pedido.id)">Eliminar</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Dulce Tentacion. Todos los derechos reservados.</p>
+        <p>Pelegrini y Av. Belgrano Sur - Santiago del Estero, Capital</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <!-- <script src="/js/main.js"></script> -->
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="/js/pedidos.js"></script>
+</body>
+
+</html>

@@ -44,9 +44,9 @@ header {
 
 nav {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 20px;
-    max-width: 600px;
+    max-width: 800px;
     padding: 10px;
     background-color: #ad8552;
 
@@ -89,8 +89,9 @@ form {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     /* Sombra suave */
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
     /* Dos columnas en la cuadrícula */
+    grid-template-columns: 1fr 1fr; /* Dos columnas en el formulario */
 }
 
 label {
@@ -353,4 +354,11 @@ mismo tipo de letra*/
 }
 .left-div {
     float: left;
+}
+
+
+.error-message {
+    grid-column: 1 / -1; /* Ocupar todas las columnas disponibles */
+    grid-row: auto; /* Permitir que ocupe la altura necesaria */
+    margin-bottom: 10px; /* Espaciado entre el mensaje de error y el siguiente elemento */
 }

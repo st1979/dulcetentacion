@@ -31,8 +31,10 @@
             y detalles de pedido. Estamos emocionados por ayudarte a crear una deliciosa torta que se adapte a tus
             gustos.</p>
 
-        <!-- <a class="btn btn-primary" href="pedidos.html">Ver listado de Pedidos</a> -->
         <form action="https://formspree.io/f/xzblopgl" method="post">
+
+            <label for="id">Id:</label>
+            <input type="text" id="id" name="id" disabled>
 
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -50,7 +52,6 @@
             <input type="date" id="fechaEvento" name="fechaEvento" required>
             <span id="error-fechaEvento" class="error-message"></span>
 
-
             <label for="sabor">Sabor:</label>
             <select id="sabor" name="sabor" required>
                 <option value="">Seleccione el sabor</option>
@@ -59,7 +60,6 @@
                 <option value="fresa">Fresa</option>
             </select>
             <span id="error-sabor" class="error-message"></span>
-
 
             <label for="tamano">Tamaño:</label>
             <select id="tamano" name="tamano" required>
@@ -74,13 +74,6 @@
 
             <!-- <label for="cobertura">Selecciona la cobertura:</label> -->
             <input type="text" id="cobertura" name="cobertura" placeholder="Escribe la cobertura deseada">
-
-            <!-- <label for="cobertura">Selecciona la cobertura:</label>
-            <select id="cobertura" name="cobertura">
-                <option value="chocolate">Chocolate</option>
-                <option value="vainilla">Vainilla</option>
-                <option value="fresa">Fresa</option>
-            </select> -->
 
             <label for="cobertura">Cobertura:</label>
             <div class="custom-select">
@@ -118,7 +111,6 @@
                 </div>
             </div>
             <span id="error-cobertura" class="error-message"></span>
-
             <!-- <label for="decoracion">Opciones de decoración:</label>
             <input type="text" id="decoracion" name="decoracion" placeholder="Escribe las opciones de decoración"> -->
             <label for="decoracion">Opciones de decoración:</label>
@@ -150,12 +142,12 @@
                 <div></div>
 
             </div>
-            <!-- <span id="error-decoracion" class="error-message"></span> -->
+            <span id="error-decoracion" class="error-message"></span>
             <label for="mensaje">Mensaje personalizado:</label>
             <input type="text" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje personalizado">
 
             <!-- <button type="submit">Crear mi Torta</button> -->
-            <button type="button" class="btn btn-success" onclick="guardar()">Guardar</button>
+            <button type="button" class="btn btn-success" onclick="modificar()">Guardar</button>
         </form>
 
 
@@ -181,16 +173,17 @@
     </script>
 
     <!-- Bootstrap JavaScript Libraries -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-     </script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-     </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <script src="/js/ingresar_pedido.js"></script>
+    <script src="/js/datos_editar.js"></script>
+    <script src="/js/editar_pedido.js"></script>
 
 </body>
 
