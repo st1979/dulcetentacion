@@ -59,6 +59,8 @@ const { createApp } = Vue
                             
                             pedido.fechaEvento = `${year}-${month}-${day}`;
                         }
+
+                        pedido.decoracion = Array.from(pedido.decoracion);
                       console.log(pedido.decoracion)
                       return pedido;
                     });
