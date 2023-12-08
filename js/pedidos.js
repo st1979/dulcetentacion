@@ -29,22 +29,22 @@ const { createApp } = Vue
                     this.pedidos = data.map(pedido => {
                       switch (pedido.cobertura) {
                         case 'chocolate':
-                          pedido.cobertura = '/img/cobertura_chocolate1.jpg';
+                          pedido.cobertura = 'img/cobertura_chocolate1.jpg';
                           break;
                         case 'chocolate4':
-                          pedido.cobertura = '/img/cobertura_chocolate4.jpg';
+                          pedido.cobertura = 'img/cobertura_chocolate4.jpg';
                           break;
                         case 'vainilla':
-                          pedido.cobertura = '/img/cobertura_vainilla2.jpg';
+                          pedido.cobertura = 'img/cobertura_vainilla2.jpg';
                           break;
                         case 'vainilla1':
-                          pedido.cobertura = '/img/cobertura_vainilla1.jpg';
+                          pedido.cobertura = 'img/cobertura_vainilla1.jpg';
                           break;
                         case 'fresa':
-                          pedido.cobertura = '/img/cobertura_fresa1.jpg';
+                          pedido.cobertura = 'img/cobertura_fresa1.jpg';
                           break;
                         case 'fresa2':
-                          pedido.cobertura = '/img/cobertura_fresa2.jpg';
+                          pedido.cobertura = 'img/cobertura_fresa2.jpg';
                           break;
                         default:
                           // Aquí puedes manejar un valor por defecto o un caso no previsto
